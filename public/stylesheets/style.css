@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F7F9EC;
+
+}
+
+#homeImage{
+  width: available;
+  height: auto;
+}
+
+#mec {
+  width: 70px;
+  height: auto;
+}
+
+#nsbe {
+  width: 70px;
+  height: auto;
+}
+
+a {
+
+}

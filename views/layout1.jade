@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title= title
+    mixin bootswatch(theme)
+      link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/" + theme + "/bootstrap.min.css", rel="stylesheet")
+    link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block navBar
+      block link
+        -var selected = 'Home'; //default
+    -var menu = { 'Home': '/', 'TEAM': '/team', 'CHAPTER INFO': '/chapterInfo', 'CONTACT US': '/contactUs' };
+
+    nav.navbar.navbar-default( role="navigation" )
+        .navbar-header
+            button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-inverse", aria-expanded="false", aria-controls="navbar")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="#") NSBE
+
+        #navbar-inverse.collapse.navbar-collapse
+            ul.nav.navbar-nav
+             each val, key in menu
+              li
+                if selected === key
+                  a.selected(href=val, title=key)= key
+                else
+                  a(href=val, title=key)= key
+
+
+   center
+   img(src="/images/nsbe_logo.jpg" id="nsbe")
+   text MEDGAR EVERS COLLEGE
+   img(src="/images/mec_logo.jpg" id="mec")
+   block content
