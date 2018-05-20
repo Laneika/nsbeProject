@@ -2,15 +2,15 @@ doctype html
 html
   head
     title= title
-    mixin bootswatch(theme)
-      link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/" + theme + "/bootstrap.min.css", rel="stylesheet")
+    //mixin bootswatch(theme)
+      //link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/" + theme + "/bootstrap.min.css", rel="stylesheet")
     link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block navBar
       block link
         -var selected = 'Home'; //default
-    -var menu = { 'Home': '/', 'TEAM': '/team', 'CHAPTER INFO': '/chapterInfo', 'MENTORS': '/mentors', 'CONTACT US': '/contactUs' };
+    -var menu = { 'HOME': '/', 'TEAM': '/team', 'CHAPTER INFO': '/chapterInfo', 'MENTORS': '/mentors', 'OPPORTUNITIES': '/opportunities','CONTACT US': '/contactUs' };
 
     nav.navbar.navbar-default( role="navigation" )
         .navbar-header
@@ -28,6 +28,8 @@ html
                 li.active: a(href=val, title=key)= key
               else
                 li: a(href=val, title=key)= key
+
+
 
 
    center

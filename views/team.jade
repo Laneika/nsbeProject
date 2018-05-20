@@ -4,4 +4,14 @@ block content
   block link
     -var selected = 'TEAM';
   h1= "Team Members"
+
+  h3= "Meet our amazing team. Each members is brilliant, passionate about their field of study, and always willing to help.  "
   img(src="/images/teammembers.jpg" id="teammembers")
+  h1= "Tech News"
+  .RSSFeed
+    - var count = 0;
+          each r in TeamDatabase
+            if count < 7
+               .RSSItems
+                  p= r.uid + "  "+ r.uname + r.em + " " + r.ph
+                  - count++;

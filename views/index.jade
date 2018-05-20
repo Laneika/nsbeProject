@@ -2,5 +2,21 @@ extends layout
 
 block content
   h1= title
-  p NETWORKING, SCHOLARSHIPS, JOBS
+  h4= "NETWORKING, SCHOLARSHIPS, JOBS"
+
   img(src="/images/landingpage.jpg" id="homeImage")
+
+  h4= "The mission of the National Society of Black Engineers is"
+  h4= "to increase the number of culturally responsible minority engineers who excel academically,"
+  h4= "succeed professionally and positively impact the community."
+
+  h1= "Tech News"
+  .RSSFeed
+    - var count = 0;
+          each post in rss
+            if count < 7
+               .RSSItems
+                  a(href= post.link)= post.title
+                  br
+                  !{post.description}
+                  - count++;

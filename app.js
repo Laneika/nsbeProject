@@ -10,6 +10,8 @@ var teamRouter = require('./routes/team');
 var chapterInfoRouter = require('./routes/chapterInfo');
 var contactUsRouter = require('./routes/contactUs');
 var mentors = require('./routes/mentors');
+var opportunities = require('./routes/opportunities');
+
 
 var app = express();
 
@@ -29,6 +31,8 @@ app.use('/team', teamRouter);
 app.use('/chapterInfo', chapterInfoRouter);
 app.use('/contactUs', contactUsRouter);
 app.use('/mentors', mentors);
+app.use('/opportunities', opportunities);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
