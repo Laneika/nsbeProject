@@ -10,3 +10,28 @@ block content
   h4= "Here, we want to make finding a mentor easy than ever. Look below to find a list of mentors within the computer science and engineering field."
 
   img(src="/images/mentorMentee.jpg" id="mentoransmentee")
+  br
+  br
+  br
+  br
+  form(action="/mentors", method="post")
+    p Enter Expertise Keyword
+    input(type="text",  name="ExpertiseSearch")
+    input(type="submit",  value="submit")
+
+    .RSSFeedmentors
+      - var count = 0;
+            each r in MentorsDatabasePost
+              if count < 20
+                 .RSSItemsmentors
+                    p= r.FIRST_NAME + " " + r.LAST_NAME + " " + r.Expertise_Name
+                    - count++;
+
+  .RSSFeedmentors
+    - var count = 0;
+          each r in MentorsDatabaseGet
+            if count < 20
+               .RSSItemsmentors
+                  p= r.FIRST_NAME + " "+ r.LAST_NAME + " | " + r.EMAIL + " | " + r.PHONE_NUMBER + " | " + r.OFFICE + " | " + r.URL + " | " + r.LINKEDIN_URL
+                  <!-- p= r.FIRST_NAME + " " + r.LAST_NAME + " " + r.Expertise_Name-->
+                  - count++;

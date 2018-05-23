@@ -5,7 +5,20 @@ body {
 
 }
 
-.RSSFeed {
+.RSSFeedteam {
+  padding-top: 30px;
+  padding-left: 100px;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  text-align: left;
+}
+
+.RSSItemsteam {
+  text-align: left;
+}
+
+.RSSFeedmentors {
   padding-top: 30px;
   padding-left: 100px;
   border-style: solid;
@@ -13,7 +26,19 @@ body {
   text-align: left;
 }
 
-.RSSItems {
+.RSSItemsmentors {
+  text-align: left;
+}
+
+.RSSFeedteamopportunities {
+  padding-top: 30px;
+  padding-left: 100px;
+  border-style: solid;
+  border-color: black;
+  text-align: left;
+}
+
+.RSSItemsteamopportunities {
   text-align: left;
 }
 .feedflare {

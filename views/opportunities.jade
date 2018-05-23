@@ -5,6 +5,16 @@ block content
     -var selected = 'OPPORTUNITIES';
   h1= "OPPORTUNITIES"
 
-  h4= "Learn about jobs, internships, and travelling to conferences around the country with us."
+  h4= "Learn about jobs, internships, and traveling to conferences around the country with us."
 
   img(src="/images/opportunitiesImage.jpg" id="opportunitiesImage")
+
+  .RSSFeedopportunities
+    - var count = 0;
+          each r in OpportunitiesDatabase
+            if count < 20
+               .RSSItemsopportunities
+                  p= r.Name
+                  a(href= r.link)= r.URL
+                  br
+                  - count++;
