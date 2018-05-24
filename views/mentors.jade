@@ -15,16 +15,16 @@ block content
   br
   br
   form(action="/mentors", method="post")
-    p Enter Expertise Keyword
+    h1= "Search Area of Expertise"
     input(type="text",  name="ExpertiseSearch")
     input(type="submit",  value="submit")
 
-    .RSSFeedmentors
+    .RSSFeedmentorsSearch
       - var count = 0;
             each r in MentorsDatabasePost
               if count < 20
                  .RSSItemsmentors
-                    p= r.FIRST_NAME + " " + r.LAST_NAME + " " + r.Expertise_Name
+                    p= r.FIRST_NAME + " " + r.LAST_NAME + " | " + r.Expertise_Name
                     - count++;
 
   .RSSFeedmentors
@@ -32,6 +32,9 @@ block content
           each r in MentorsDatabaseGet
             if count < 20
                .RSSItemsmentors
-                  p= r.FIRST_NAME + " "+ r.LAST_NAME + " | " + r.EMAIL + " | " + r.PHONE_NUMBER + " | " + r.OFFICE + " | " + r.URL + " | " + r.LINKEDIN_URL
+                  br
+                  p= r.FIRST_NAME + " "+ r.LAST_NAME + "  |  " + r.EMAIL + "  |  " + r.PHONE_NUMBER + "  |  " + r.OFFICE + "  |  " + r.LINKEDIN_URL
+                  a(href= r.URL)= r.URL
+                  <!-- a(href= r.LINKEDIN_URL)= r.LINKEDIN_URL-->
                   <!-- p= r.FIRST_NAME + " " + r.LAST_NAME + " " + r.Expertise_Name-->
                   - count++;

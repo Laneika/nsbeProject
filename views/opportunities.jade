@@ -14,7 +14,7 @@ block content
           each r in OpportunitiesDatabase
             if count < 20
                .RSSItemsopportunities
-                  p= r.Name
-                  a(href= r.link)= r.URL
                   br
+                  p= r.Name
+                  a(href= r.URL)= r.URL
                   - count++;

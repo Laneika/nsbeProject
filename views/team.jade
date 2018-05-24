@@ -13,5 +13,6 @@ block content
           each r in TeamDatabase
             if count < 20
                .RSSItemsteam
-                  p= r.uname + r.em + " " + r.ph
+                  p= r.uname + "  |  " + r.em + "  |  " + r.ph
+                  br
                   - count++;

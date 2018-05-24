@@ -5,13 +5,30 @@ body {
 
 }
 
+.RSSFeed {
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  width: auto;
+  font-size: 20px;
+}
+
+.RSSItems {
+  text-align: justify;
+}
+
 .RSSFeedteam {
   padding-top: 30px;
   padding-left: 100px;
   border-color: black;
   border-style: solid;
   border-width: thin;
+  width: 40%;
   text-align: left;
+  font-size: 22px;
 }
 
 .RSSItemsteam {
@@ -23,22 +40,39 @@ body {
   padding-left: 100px;
   border-style: solid;
   border-color: black;
+  width: 40%;
   text-align: left;
+  font-size: 20px;
 }
 
 .RSSItemsmentors {
   text-align: left;
+  font-size: 20px;
 }
 
-.RSSFeedteamopportunities {
+.RSSFeedmentorsSearch {
+  padding-top: 30px;
+  padding-left: 100px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.RSSItemsmentors {
+  text-align: left;
+  font-size: 20px;
+}
+
+.RSSFeedopportunities {
   padding-top: 30px;
   padding-left: 100px;
   border-style: solid;
   border-color: black;
+  width: 60%;
   text-align: left;
+  font-size: 20px;
 }
 
-.RSSItemsteamopportunities {
+.RSSItemsopportunities {
   text-align: left;
 }
 .feedflare {
@@ -46,6 +80,20 @@ body {
   border: 3px;
   border-color: black;
   text-align: left;
+}
+
+.RSSFeed {
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  width: auto;
+}
+
+.RSSItems {
+  text-align: justify;
 }
 
 #homeImage{
@@ -70,12 +118,12 @@ body {
 }
 
 #contactUs {
-  width: 550px;
+  width: 850px;
   height: auto;
 }
 
 #diversityChapterInfo {
-  width: 700px;
+  width: 1000px;
   height: auto;
 }
 
